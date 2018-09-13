@@ -1,53 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Wow Bosses</title>
   <link href="main.css" rel="stylesheet">
-</head>
-<body>
-<div class="wrapper">
-  <div class="controls">
-    <div class="title">
-      <h1>WOW Bosses</h1>
-    </div>
-    <form>
-      <div class="info">
-        <div class="searchBar">
-          <label for="search">Enter a SINGLE search term (required) :</label>
-          <input type="text" id="search" class="search" required>
-          
-        </div>
-        <div class="name">
-<button id="getText">Get Text</button>
-<script>document.getElementById("getText").addEventListener('click', getText)
-
-function getText(){
   
-}
-</script>
-        </div>
-        <div class="level">
+</head>
 
-        </div>
-        <div class="health">
-
-        </div>
-      </div>
-
-    </form>
-<!--SideBar-->
-<div class="render">
-
-</div>
-
-    
+<body class="background">
+  <h1>WOWsers all the Bosses</h1>
+  <div class="row">
+    <select id="ddBosses">
+      <option default>Select a boss...</option>
+    </select>
   </div>
-</div>
-
-
+  <div id="bossPic" class="row">
+    <div class="columns">
+      <img class="render" id="imageDisplay">
+    </div>
+    <div class="columns">
+      <form>
+        <label>Boss Name:</label>
+        <input id="nameDisplay" for="nameDisplay">
+        <label>Health:</label>
+        <input id="healthDisplay" for="healthDisplay">
+        <label>Level:</label>
+        <input id="levelDisplay" for="levelDisplay">
+        <label>Description:</label>
+        <textarea rows="10" cols="55" id="descriptionDisplay"></textarea>
+      </form>
+    </div>
+  </div>
   <script type="text/javascript" src="code.js"></script>
-</body>
+ </body>
 </html>
