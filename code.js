@@ -14,7 +14,7 @@ fetch(url)
       console.log(wowBosses[i])
       document.getElementById('ddBosses').add(new Option(wowBosses[i]["name"]));
       //allow for me to go through each of the results from the API and each result represents a boss with the information
-      
+
       let bossImage = document.getElementById('imageDisplay');
       let bossName = document.getElementById('nameDisplay');
       let bossHealth = document.getElementById('healthDisplay');
@@ -29,8 +29,6 @@ fetch(url)
             levelDisplay.value = wowBossInfo[j]["level"];
             descriptionDisplay.value = wowBossInfo[j]["description"]
             for (k = 0; k < 756; k++) { // after selection is made, to apply boss attributes
-              // console.log("https://render-us.worldofwarcraft.com/npcs/zoom/creature-display-"+wowBossInfo[j]['npcs'][k]['creatureDisplayId']+".jpg");
-              //used concatenation to populate source attribute
               bossImage.src = "https://render-us.worldofwarcraft.com/npcs/zoom/creature-display-" + wowBossInfo[j]['npcs'][k]['creatureDisplayId'] + ".jpg";
             }
           }
